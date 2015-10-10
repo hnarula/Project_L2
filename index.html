@@ -3,9 +3,9 @@
 <head>
     <title></title>
     <script src="Scripts/jquery-2.1.4.js"></script>
-
+    <script src="http://localhost:4004/socket.io/socket.io.js"></script>
     <link href="style.css" rel="stylesheet" />
-
+    <script src="client.js"></script>
     <script type="text/javascript">
 
      
@@ -27,6 +27,16 @@
     
 </head>
 <body>
+    <div id="init"> 
+        <p>
+            Please Enter Your Name: <input name="name" id="name"></input>
+            <input type="submit" onclick="connect();">
+        </p>
+    </div>
+    <div id="connectionresult">
+        
+    </div>
+    
 
     <div id="main">
 
@@ -56,7 +66,6 @@
     </div>
 
     <script src="game.js"></script>
-    <script src="http://localhost:4004/socket.io/socket.io.js"></script>
     <script type="text/javascript">
         var playerlist = [];
         var playername;
@@ -89,7 +98,7 @@
                 gameend = true;
             }
         }
-        //var game = new Game(4, players)
+        var game = new Game(4, players)
     </script>
 </body>
 </html>
