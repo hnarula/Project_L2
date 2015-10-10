@@ -12,4 +12,3 @@ app.get('/', function (req, res) {
 
 var conn = 0;
 var playerlist = [];
-});
