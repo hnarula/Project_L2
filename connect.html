@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <link href="style.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            $("#click").click(function () {
+
+                $("#click2").css("background-color", "yellow");
+
+            });
+
+            $("#click2").click(function () {
+                alert('Click2 event is fired');
+            });
+        });
+
+
+        var socket = io('http://localhost:4004');
+        socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', { my: 'data' });
+        });
+
+    </script>
+
+</head>
+<body>
+
+
+    <div id="click">
+        hello
+    </div>
+    <div id="click2">
+        hello
+    </div>
+
+</body>
+</html>
