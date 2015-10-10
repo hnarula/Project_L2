@@ -1,1 +1,0 @@
-node "C:\Users\DollarComp\Desktop\Project L2\VSApp\VSApp\app.js"
