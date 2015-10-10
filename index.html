@@ -50,38 +50,37 @@
 
     <script src="game.js"></script>
     <script type="text/javascript">
-        var playerlist = [];
-        var playername;
-        var socket = io.connect('http://localhost:4004');
-        socket.emit('my other event', { my: 'data' });
-        socket.on('newconnection', function (data) {
-            playername = data.name;
-        });
-        socket.on('newplayer', function (data) {
-            console.log('new player');
-            playerlist = data;
-            if (playerlist.length == 4) {
-                startGame();
-            }
-        });
-
-        function startGame() {
-            var deck = new Deck();
-            deck.shuffle();
-            var playerlist = [];
-            for (var i = 0; i < numPlayers; i++) {
-                playerlist[i] = new Player(playerNames[i]);
-                playerlist[i].card1 = deck.cardstack.pop();
-            }
-            var gameend = false;
-            while (!gameend) {
-                for (pID in playerlist) {
-                    playerlist[pID].draw;
-                }
-                gameend = true;
-            }
-        }
-        var game = new Game(4, players)
+//        var playerlist = [];
+//        var playername;
+//        socket.emit('my other event', { my: 'data' });
+//        socket.on('newconnection', function (data) {
+//            playername = data.name;
+//        });
+//        socket.on('newplayer', function (data) {
+//            console.log('new player');
+//            playerlist = data;
+//            if (playerlist.length == 4) {
+//                startGame();
+//            }
+//        });
+//
+//        function startGame() {
+//            var deck = new Deck();
+//            deck.shuffle();
+//            var playerlist = [];
+//            for (var i = 0; i < numPlayers; i++) {
+//                playerlist[i] = new Player(playerNames[i]);
+//                playerlist[i].card1 = deck.cardstack.pop();
+//            }
+//            var gameend = false;
+//            while (!gameend) {
+//                for (pID in playerlist) {
+//                    playerlist[pID].draw;
+//                }
+//                gameend = true;
+//            }
+//        }
+//        var game = new Game(4, players)
     </script>
 </body>
 </html>
