@@ -1,11 +1,12 @@
 {
   "name": "Project_L2",
   "version": "1.0.0",
-  "description": "",
+  "description": "love letter",
   "main": "app.js",
   "dependencies": {
     "express": "^3.3.8",
     "node-uuid": "^1.3.3",
+    "nodemon": "^1.7.1",
     "socket.io": "^0.9.17"
   },
   "devDependencies": {},
