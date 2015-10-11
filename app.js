@@ -1,14 +1,13 @@
-var express = require("express"),
-    app = express();
-var server = require('http').Server(app);
-var io = require('socket.io').listen(server);
+var express = require('express');
+var app = express();
 
-server.listen(3000);
-app.use("/Scripts", express.static(__dirname + '/Scripts'));
-app.use("/", express.static(__dirname + '/'));
 app.get('/', function (req, res) {
-    res.sendfile(__dirname + '/index.html');
+  res.send('Hello World!');
 });
 
-var conn = 0;
-var playerlist = [];
+var server = app.listen(3000, function () {
+  var host = server.address().address;
+  var port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
+});
