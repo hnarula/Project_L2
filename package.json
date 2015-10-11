@@ -1,23 +1,17 @@
 {
-  "name": "project_l2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.13.3"
-  },
-  "devDependencies": {},
+  "name": "Project_L2",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hnarula/Project_L2.git"
+  "dependencies": {
+    "express": "^3.21.2",
+    "socket.io": "^0.9.17"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hnarula/Project_L2/issues"
-  },
-  "homepage": "https://github.com/hnarula/Project_L2#readme"
+  "devDependencies": {
+    "azure": "~0.10.0",
+    "nodemon": "~1.2.1",
+    "node-inspector": "~0.7.4"
+  }
 }
