@@ -16,3 +16,9 @@ app.get('/', function (req, res) {
 });
 
 var io = require('socket.io').listen(httpServer);
+io.on('connection', function (socket) {
+    socket.on('newplayer', function (data) {
+        var playerName = data.name;
+        socket.emit('playerconnected', { name: playerName });
+    });
+});
