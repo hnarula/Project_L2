@@ -18,7 +18,9 @@ app.get('/', function (req, res) {
 var io = require('socket.io').listen(httpServer);
 io.on('connection', function (socket) {
     socket.on('newplayer', function (data) {
-        var playerName = data.name;
-        socket.emit('playerconnected', { name: playerName });
+        // do some player validation
+        var logdata = "Player " + data.name +  " has connected.";
+        socket.emit('playerconnected', { logdata: logdata, connection: true }); // sends to the new player
+        socket.broadcast.emit('playerconnected', { logdata: logdata, connection: true }); // sends to every client connected
     });
 });

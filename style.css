@@ -1,5 +1,12 @@
-﻿body,html{height:100%;}
+html{height:100%;}
 
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 #main {
   border: 1px solid red;
@@ -7,7 +14,6 @@
   min-height: 100%;
   box-sizing: border-box;
   position: relative;
-  text-align: center;
   background-color: lightpink;
 }
 
@@ -81,7 +87,7 @@
   height: 90%;
   box-sizing: border-box;
   position: absolute;
-  text-align: center;
+  background-color: #d8ebff;
 }
 
 #click2 {
@@ -96,3 +102,15 @@
   cursor: pointer;
 }
 
+table.logdata {
+    color: #FF6600;
+    background-color: #d8ebff;
+    width: 100%;
+    margin: 0px;
+    height: 20px;
+}
+
+table.logdata th {
+    font-weight: bold;
+    text-align: center;
+}
